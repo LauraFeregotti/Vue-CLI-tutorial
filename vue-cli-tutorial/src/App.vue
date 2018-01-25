@@ -28,7 +28,7 @@ export default {
                 {name: 'Yoshi', speciality: 'Data Diggin', show: false}
             ],
       
-      title:'Vue Ninjas'
+      title:"Vue Ninjas"
     }
   },
   methods:{
