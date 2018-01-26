@@ -29,4 +29,3 @@ body{
     font-family: 'Nunito SemiBold';
 }
 </style>
-
