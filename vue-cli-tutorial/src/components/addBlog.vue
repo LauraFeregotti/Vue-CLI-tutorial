@@ -1,4 +1,3 @@
-
 <template>
     <div id="add-blog">
         <h2>Add a New Blog Post</h2>
@@ -18,6 +17,10 @@
                 <label>Cheese</label>
                 <input type="checkbox" value="cheese" v-model="blog.categories" />
             </div>
+            <label>Author:</label>
+            <select v-model="blog.author">
+                <option v-for="author in authors">{{ author }}</option>
+            </select>
         </form>
         <div id="preview">
             <h3>Preview blog</h3>
@@ -28,6 +31,7 @@
             <ul>
                 <li v-for="category in blog.categories">{{ category }}</li>
             </ul>
+            <p>Author: {{ blog.author }}</p>
         </div>
     </div>
 </template>
@@ -41,8 +45,10 @@ export default {
             blog: {
                 title: '',
                 content: '',
-                categories: []
-            }
+                categories: [],
+                author: ''
+            },
+            authors: ['The Net Ninja', 'The Angular Avenger', 'The Vue Vindicator']
         }
     },
     methods: {
@@ -82,5 +88,6 @@ h3{
 }
 #checkboxes label{
     display: inline-block;
+    margin-top: 0;
 }
 </style>
